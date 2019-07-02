@@ -1,32 +1,5 @@
 \documentclass{beamer}
-\mode<presentation>
-{
-  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
-  \usecolortheme{seahorse} % or try albatross, beaver, crane, ...
-  \usefonttheme{serif}  % or try serif, structurebold, ...
-  \setbeamertemplate{navigation symbols}{}
-  \setbeamertemplate{caption}[numbered]
-} 
-\usepackage[english]{babel}
-\usepackage{graphicx}
-\graphicspath{ {./images/} {./logo/}}
-
-\usepackage{xcolor}
-\usepackage{amsmath}
-
-\usepackage{xeCJK}
-\usepackage{fontspec}
-\setCJKmainfont{HWzhongsong.ttf} % ppt 建议使用华文中宋
-\setromanfont{Times New Roman}
-\setsansfont{Arial}
-\setmonofont[Color={0019D4}]{Courier New}
-
-\usepackage{textpos}
-\addtobeamertemplate{frametitle}{}{%
-\begin{textblock*}{10mm}(.85\textwidth,-1cm)
-\includegraphics[height=1cm,width=1cm]{logo/logo_bjtu.png}
-\end{textblock*}}
-
+\usepackage{bjtu}
 
 % show table of contents at begin of each section
 \AtBeginSection[]
@@ -43,7 +16,7 @@
 \title{title}
 \author{Cao Xuyang}
 \date{2019.05.17}
-\logo{\includegraphics[height=0.1\textwidth]{logo_bjtu}\vspace{220pt}}
+\logo{\includegraphics[height=0.1\textwidth]{logo_bjtu}\vspace{240pt}}
 
 %===================================================
 %===================================================
@@ -58,6 +31,10 @@
 \input{body.tex}
 %==================在这上面添加内容=================
 
-\bibliographystyle{unsrt}
-\bibliography{references}
+\begin{frame}{Reference}
+    \frametitle{haha}
+    \bibliographystyle{unsrt}
+    \bibliography{references}
+  
+\end{frame}
 \end{document}

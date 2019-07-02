@@ -1,0 +1,44 @@
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{beaver} % or try albatross, beaver, crane, ...
+  \usefonttheme{serif}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+% \usecolortheme{default} % https://www.overleaf.com/learn/latex/Beamer#Themes_and_colorthemes
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\setCJKmainfont{HWzhongsong.ttf} % ppt 建议使用华文中宋
+\setromanfont{Times New Roman}
+\setsansfont{Arial}
+% \setmonofont[Color={0019D4}]{Courier New}
+
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{ {./images/} {./logo/}}
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+
+%\usepackage{textpos}
+%\addtobeamertemplate{frametitle}{}{%
+%\begin{textblock*}{10mm}(.85\textwidth,-1cm)
+%\includegraphics[height=1cm,width=1cm]{logo/logo_bjtu.png}
+%\end{textblock*}}
+
+
+% Definition der FEIT-Farbe
+\definecolor{ovgufeitgreen}{RGB}{0 0 100}
+% \newcommand{\pagefont}{ \fontsize{4}{6}\selectfont}
+\newcommand{\ft}[1]{\frametitle{\hfill\includegraphics{logo/logo_bjtu.png}{#1}}}
+
+% Definieren der Kopfzeile
+\setbeamertemplate{headline}{
+\begin{minipage}{0.6\textwidth}
+	\vspace*{0.1cm}\hspace*{0.2cm}
+	\includegraphics[width=1cm]{logo/logo_bjtu.png}
+\end{minipage}
+
+\rule{\paperwidth}{1pt}%
+}% Definition der FEIT-Farbe
