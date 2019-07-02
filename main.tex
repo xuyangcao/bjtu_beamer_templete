@@ -1,5 +1,7 @@
 \documentclass{beamer}
 \usepackage{bjtu}
+\usepackage{graphicx}
+\graphicspath{ {./images/} {./logo/}}
 
 % show table of contents at begin of each section
 \AtBeginSection[]
@@ -16,23 +18,25 @@
 \title{title}
 \author{Cao Xuyang}
 \date{2019.05.17}
-\logo{\includegraphics[height=0.1\textwidth]{logo_bjtu}\vspace{240pt}}
+\logo{\includegraphics[width=1cm,height=1cm]{logo_bjtu}\hspace{1.05\textwidth}\vspace{240pt}}
 
 %===================================================
 %===================================================
 \begin{document}
 \frame{\titlepage}                  % title page
-\begin{frame}{Table of Contents}    % table of contents frame 
+\begin{frame}{Table of Contents（目录）}    % table of contents frame 
     \setcounter{tocdepth}{1}        % 只显示一层目录结构
     \tableofcontents                % table of contents
 \end{frame}
+\begin{frame}{医学图像处理}
+    \alert{哈哈}
+\end{frame}{}
 
 %==================在这下面添加内容=================
 \input{body.tex}
 %==================在这上面添加内容=================
 
 \begin{frame}{Reference}
-    \frametitle{haha}
     \bibliographystyle{unsrt}
     \bibliography{references}
   
