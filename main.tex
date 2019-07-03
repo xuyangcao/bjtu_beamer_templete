@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[t,15pt]{beamer}
 \usepackage{bjtu}
 \usepackage{graphicx}
 \graphicspath{ {./images/} {./logo/}}
@@ -14,23 +14,22 @@
 }
 
 %===================================================
+%==================在这里修改标题和姓名================
 %===================================================
-\title{title}
+\title{Uncertainty Aware Temporal Ensembling Model for Semi-Supervised Medical Image Segmentation}
 \author{Cao Xuyang}
 \date{2019.05.17}
-\logo{\includegraphics[width=1cm,height=1cm]{logo_bjtu}\hspace{1.05\textwidth}\vspace{240pt}}
 
 %===================================================
 %===================================================
 \begin{document}
-\frame[plain]{\titlepage}                  % title page
+\frame{\titlepage}                  % title page
+
+\logo{\includegraphics[width=1cm,height=1cm]{logo_bjtu}\hspace{1.05\textwidth}\vspace{240pt}}
 \begin{frame}{Table of Contents（目录）}    % table of contents frame 
     \setcounter{tocdepth}{1}        % 只显示一层目录结构
     \tableofcontents                % table of contents
 \end{frame}
-\begin{frame}{医学图像处理}
-    \alert{哈哈}
-\end{frame}{}
 
 %==================在这下面添加内容=================
 \input{body.tex}
@@ -38,7 +37,7 @@
 
 \begin{frame}{Reference}
     \bibliographystyle{unsrt}
-    \bibliography{references}
+    \small\bibliography{references}
   
 \end{frame}
 \end{document}

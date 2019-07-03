@@ -16,14 +16,62 @@
 \usepackage{amsmath}
 \usepackage{textpos}
 
+% color 
+\definecolor{bjtu title}{RGB}{153, 0, 51}
+\definecolor{bjtu ruler}{RGB}{198, 217, 241}
+\definecolor{bjtu frame title}{RGB}{0, 0, 204}
+\setbeamercolor{bjtu color theme}{fg=bjtu title,bg=white}
+\setbeamercolor{titlelike}{parent=bjtu color theme}
+
 % headline
 \setbeamertemplate{headline}{\vspace{2pt}}
 
 % frame title
-\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\hfuzz=30pt% 加上这句话可以防止出现overfull warning
 \setbeamertemplate{frametitle}{%
-    \vspace{1pt}\hspace{1.3em}\color{blue}\usebeamerfont{frametitle}\insertframetitle%
+    \vspace{1pt}\hspace{1.3em}\color{bjtu frame title}\usebeamerfont{frametitle}\insertframetitle%
     \par%
     \hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}%
-    \color{bleudefrance}\rule{\paperwidth}{2pt}%
+    \color{bjtu ruler}\rule{\paperwidth}{2pt}%
+}
+
+% title page 
+\setbeamertemplate{title page}{%
+% logo
+\begin{minipage}{1.\textwidth}%
+    \vspace{-2mm}%
+	\hspace{-1.6em}\includegraphics[height=1.0cm]{logo/logo_bjtu.png}\hspace{8pt}\vspace{3pt}\includegraphics[height=0.9cm]{logo/header_logo.jpg}%
+\end{minipage}%
+\par%
+\hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}%
+\color{bjtu ruler}\rule{\paperwidth}{2pt}%
+
+% title
+\begin{centering}
+\begin{beamercolorbox}[sep=8pt,center, wd=12cm]{title}
+
+    \vspace{4em}\usebeamerfont{title}\textbf{\inserttitle}\par%
+    \ifx\insertsubtitle\@empty%
+    \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+    \fi%     
+\end{beamercolorbox}%
+
+% author
+\begin{textblock*}{5cm}(6cm, 2.5cm)
+{\color{bjtu frame title}\usebeamerfont{author}\insertauthor}
+\end{textblock*}
+
+% institute
+\begin{textblock*}{5cm}(7cm, 3.5cm)
+{\color{bjtu frame title}\usebeamerfont{author}\insertinstitute}
+\end{textblock*}
+
+% date 
+\begin{textblock*}{5cm}(6cm, 3cm)
+{\color{bjtu frame title}\usebeamerfont{author}\insertdate}
+\end{textblock*}
+
+\end{centering}
 }
