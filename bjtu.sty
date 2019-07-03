@@ -1,7 +1,7 @@
 \mode<presentation>
 {
   \usetheme{default}
-  \usecolortheme{seahorse}
+  \usecolortheme{default}
   \usefonttheme{serif}
   \setbeamertemplate{navigation symbols}{}
   \setbeamertemplate{caption}[numbered]
@@ -26,20 +26,10 @@
 % headline
 \setbeamertemplate{headline}{\vspace{2pt}}
 
-% frame title
-\hfuzz=30pt% 加上这句话可以防止出现overfull warning
-\setbeamertemplate{frametitle}{%
-    \vspace{1pt}\hspace{1.3em}\color{bjtu frame title}\usebeamerfont{frametitle}\insertframetitle%
-    \par%
-    \hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}%
-    \color{bjtu ruler}\rule{\paperwidth}{2pt}%
-}
-
 % title page 
 \setbeamertemplate{title page}{%
 % logo
 \begin{minipage}{1.\textwidth}%
-    \vspace{-2mm}%
 	\hspace{-1.6em}\includegraphics[height=1.0cm]{logo/logo_bjtu.png}\hspace{8pt}\vspace{3pt}\includegraphics[height=0.9cm]{logo/header_logo.jpg}%
 \end{minipage}%
 \par%
@@ -74,4 +64,13 @@
 \end{textblock*}
 
 \end{centering}
+}
+
+% frame title
+\hfuzz=30pt% 加上这句话可以防止出现overfull warning
+\setbeamertemplate{frametitle}{%
+    \vspace{1pt}\hspace{1.3em}\color{bjtu frame title}\usebeamerfont{frametitle}\insertframetitle%
+    \par%
+    \hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}%
+    \color{bjtu ruler}\rule{\paperwidth}{2pt}%
 }

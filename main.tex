@@ -1,46 +1,49 @@
-\documentclass[t,15pt]{beamer}
+\documentclass[t,11pt]{beamer}
 \usepackage{bjtu}
 \usepackage{graphicx}
 \graphicspath{ {./images/} {./logo/}}
 
-% show table of contents at begin of each section
+%================在每个章节前显示目录==============
 \AtBeginSection[]
 {
   \begin{frame}
     \frametitle{Table of Contents}
-    \setcounter{tocdepth}{1}
+    \setcounter{tocdepth}{1} % 显示一级标题
     \tableofcontents[currentsection]
   \end{frame}
 }
 
 %===================================================
-%==================在这里修改标题和姓名================
+%===============在这里修改标题和姓名================
 %===================================================
-\title{title}
+\title{Title}
 \author{Xuyang Cao}
 \date{}
 
-%===================================================
+%====================文章主体=======================
 \begin{document}
 
-%========================标题页======================
+%========================标题页=====================
 \frame{\titlepage}                  
 
 %========================LOGO=======================
 \logo{\includegraphics[width=1cm,height=1cm]{logo_bjtu}\hspace{1.05\textwidth}\vspace{240pt}}
 
-%========================目录页======================
-\begin{frame}{Table of Contents（目录）}    % table of contents frame 
+%========================目录页=====================
+% 如果没有目录结构就注释掉
+\begin{frame}{Table of Contents}           % table of contents frame 
     \setcounter{tocdepth}{1}               % 只显示一层目录结构
     \tableofcontents                       % table of contents
 \end{frame}
 
-%========================正 文=======================
-\input{body.tex}
+%========================正 文======================
+% 到对应的tex文件中编辑
+\input{body.tex} 
 
-%=======================参考文献======================
+%=======================参考文献====================
+% 如果不需要参考文献就注释掉
 \begin{frame}{Reference}
-    \bibliographystyle{unsrt}
+    \bibliographystyle{ieeetr}
     \small\bibliography{references}
 \end{frame}
 
