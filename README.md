@@ -2,6 +2,6 @@
 
 This is an amazing LaTex template for presentation in bjtu.
 
-![](./images/title_pages.png)
+![](./images/title_page.png)
 
 ![](./images/sample_page.png)
