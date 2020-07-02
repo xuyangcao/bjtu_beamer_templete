@@ -1,0 +1,60 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemebjtu}
+
+\mode<presentation>
+{
+  \usefonttheme{serif}
+} 
+
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\setCJKmainfont{HWzhongsong.ttf} % ppt 中文建议使用华文中宋
+\setromanfont{Times New Roman}
+\setsansfont{Arial}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{textpos}
+\usepackage{float}
+
+\useoutertheme{bjtufooter}
+
+% title page 
+\setbeamertemplate{title page}{%
+    % logo in the first page
+    \begin{minipage}{1.\textwidth}%
+    	\vspace{-0.2cm}\hspace{-0.9cm}\includegraphics[height=1.0cm,width=1.0cm]{logo/logo_bjtu}\hspace{0.1cm}\vspace{2pt}\includegraphics[height=0.9cm]{logo/header_logo}%
+    \end{minipage}%
+    \par%
+    \hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}%
+    \color{ruler_blue}\rule{\paperwidth}{2pt}%
+
+    % title
+    \begin{centering}
+        \begin{beamercolorbox}[sep=8pt,center,wd=12cm]{title}
+        
+            \vspace{4em}\usebeamerfont{title}{\inserttitle}\par%
+            \ifx\insertsubtitle\@empty%
+            \else%
+                \vskip0.25em%
+                {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+            \fi%     
+        \end{beamercolorbox}%
+    
+        % author
+        \begin{textblock*}{5cm}(6cm, 2.5cm)
+            {\color{dark_blue}\usebeamerfont{author}\insertauthor}
+        \end{textblock*}
+        
+        % institute
+        \begin{textblock*}{5cm}(6cm, 3cm)
+            {\color{dark_blue}\usebeamerfont{author}\insertinstitute}
+        \end{textblock*}
+        
+        % date 
+        \begin{textblock*}{5cm}(6cm, 3.5cm)
+            {\color{dark_blue}\usebeamerfont{author}\insertdate}
+        \end{textblock*}
+    
+    \end{centering}
+}
