@@ -1,11 +1,24 @@
-\documentclass[t,10pt]{beamer} % 8pt -- 14pt, 17pt and 20pt
+\documentclass[t,12pt]{beamer} % 8pt -- 14pt, 17pt and 20pt
 \usetheme{bjtu}
 \usecolortheme{bjtucolor}
 
+% packages
 \usepackage{graphicx}
 \graphicspath{ {./images/} {./logo/}}
 \usepackage{caption}
 \usepackage{booktabs}
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\setCJKmainfont{HWzhongsong.ttf} % ppt 中文建议使用华文中宋
+\setromanfont{Times New Roman}
+\setsansfont{Arial}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{textpos}
+\usepackage{float}
+\usepackage{hyperref}
+
 
 % show table of contents before each chapter
 \AtBeginSection[]
@@ -17,20 +30,19 @@
   \end{frame}
 }
 
-% title - author - data
-\title{Title}
-% \subtitle{subtitle}
+% title,author,data etc.
+\title{Title of the Presentation}
+\subtitle{Subtitle}
+\institute{\url{https://github.com/xuyangcao}}
 \author{Xuyang Cao}
-\date{}
-% \institute{Overleaf}
+\date{2020.07.03}
+
 
 
 % document body
 \begin{document}
-
 % title
-\frame{\titlepage}                  
-
+\frame[plain]{\titlepage}           
 % logo
 \logo{\includegraphics[width=1cm,height=1cm]{logo_bjtu}}
 
@@ -41,8 +53,11 @@
     \tableofcontents                       % table of contents
 \end{frame}
 
-% body.tex
+% =====================
+% generally, you do not need to change the document body any more
+% please edit body.tex directly
 \input{body.tex} 
+% =====================
 
 % reference
 % comment this section if unnecessary

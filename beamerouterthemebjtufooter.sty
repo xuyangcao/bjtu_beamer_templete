@@ -1,6 +1,5 @@
 \mode<presentation>
 
-
 \setbeamercolor{section in head/foot}{parent=palette primary}
 \setbeamercolor{subsection in head/foot}{parent=palette primary}
 
@@ -17,7 +16,7 @@
 	\end{beamercolorbox}%
 	
 	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-		\usebeamerfont{title in head/foot}\insertshorttitle
+		\usebeamerfont{title in head/foot}\insertsection
 	\end{beamercolorbox}%
 	
 	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
@@ -35,23 +34,21 @@
   \vskip2pt%
 }%
 
+% headline
 \defbeamertemplate*{headline}{sidebar theme}
 {%
 \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
     \usebeamercolor{logo}%
-    \hskip 1.05cm%
+    \hskip 1.2cm%
     \hbox to 0pt{\hss\vbox to 0pt{\vss\hbox{\insertlogo}\vss}}%
-    \vskip -0.56cm
+    \vskip -7ex
 \end{beamercolorbox}
 }
 
-      
-% headline
-% \setbeamertemplate{headline}{\vspace{2pt} \hspace{2pt} \insertlogo}
 % frame title
 \setbeamertemplate{frametitle}{%
     % \hspace{0.5cm}\usebeamerfont{frametitle}\textbf{\insertframetitle} % left side align
-    \vspace{4pt}
+    \vspace{0.51ex}
    \centering \textbf{\insertframetitle} % centering
    
     \par%
