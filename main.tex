@@ -1,4 +1,4 @@
-\documentclass[t,12pt]{beamer} % 8pt -- 14pt, 17pt and 20pt
+\documentclass[t,11pt]{beamer} % 8pt -- 14pt, 17pt and 20pt
 \usetheme{bjtu}
 \usecolortheme{bjtucolor}
 
@@ -9,24 +9,33 @@
 \usepackage{booktabs}
 \usepackage{xeCJK}
 \usepackage{fontspec}
-\setCJKmainfont{HWzhongsong.ttf} % ppt 中文建议使用华文中宋
+\setCJKmainfont{HWzhongsong.ttf}
+\setCJKmonofont{HWzhongsong.ttf}
 \setromanfont{Times New Roman}
 \setsansfont{Arial}
+
 \usepackage[english]{babel}
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{textpos}
 \usepackage{float}
 \usepackage{hyperref}
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=magenta,      
+%     urlcolor=cyan,
+% }
 
 
-% show table of contents before each chapter
+% show toc before each chapter
 \AtBeginSection[]
 {
   \begin{frame}
     \frametitle{Table of Contents}
-    \setcounter{tocdepth}{1} % do not show subsection in table of contents
+    \setcounter{tocdepth}{2} % do not show subsection in toc
     \tableofcontents[currentsection]
+    \addtocounter{framenumber}{-1}  % do not count in toc
   \end{frame}
 }
 
@@ -42,14 +51,14 @@
 % document body
 \begin{document}
 % title
-\frame[plain]{\titlepage}           
+\frame[plain]{\titlepage \addtocounter{framenumber}{-1}}        
 % logo
 \logo{\includegraphics[width=1cm,height=1cm]{logo_bjtu}}
 
 % table of contents
 % comment this section if unnecessary
 \begin{frame}{Table of Contents}           % table of contents frame 
-    \setcounter{tocdepth}{1}               % do not show subsection
+    \setcounter{tocdepth}{2}               % do not show subsection
     \tableofcontents                       % table of contents
 \end{frame}
 
@@ -63,6 +72,7 @@
 % comment this section if unnecessary
 \begin{frame}{Reference}
     \vspace{-0.5em}
+    \nocite{*} % show all the reference
     \bibliographystyle{ieeetr}
     \tiny\bibliography{references}
 \end{frame}

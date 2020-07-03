@@ -12,11 +12,11 @@
 {%
 \hbox{%
 	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-		\usebeamerfont{author in head/foot}\insertshortauthor
+		\usebeamerfont{author in head/foot}\insertsection
 	\end{beamercolorbox}%
 	
 	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-		\usebeamerfont{title in head/foot}\insertsection
+		\usebeamerfont{title in head/foot}\insertsubsection
 	\end{beamercolorbox}%
 	
 	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
@@ -48,7 +48,7 @@
 % frame title
 \setbeamertemplate{frametitle}{%
     % \hspace{0.5cm}\usebeamerfont{frametitle}\textbf{\insertframetitle} % left side align
-    \vspace{0.51ex}
+    \vspace{1ex}
    \centering \textbf{\insertframetitle} % centering
    
     \par%
