@@ -1,6 +1,6 @@
-# bjtu_beamer_templete
+# Beamer theme in BJTU.
 
-This is an amazing LaTex template for presentation in bjtu.
+This is an amazing LaTex template for presentation in BJTU.
 
 ![](./images/title_page.png)
 
