@@ -35,7 +35,6 @@
     \frametitle{Table of Contents}
     \setcounter{tocdepth}{2} % do not show subsection in toc
     \tableofcontents[currentsection]
-    \addtocounter{framenumber}{-1}  % do not count in toc
   \end{frame}
 }
 
@@ -53,7 +52,7 @@
 % title
 \frame[plain]{\titlepage \addtocounter{framenumber}{-1}}        
 % logo
-\logo{\includegraphics[width=1cm,height=1cm]{logo_bjtu}}
+\logo{\includegraphics[width=1cm,height=1cm]{logo/logo_bjtu_light_blue}}
 
 % table of contents
 % comment this section if unnecessary
@@ -70,7 +69,7 @@
 
 % reference
 % comment this section if unnecessary
-\begin{frame}{Reference}
+\begin{frame}[allowframebreaks]{Reference}
     \vspace{-0.5em}
     \nocite{*} % show all the reference
     \bibliographystyle{ieeetr}

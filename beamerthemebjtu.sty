@@ -13,7 +13,7 @@
 \setbeamertemplate{title page}{%
     % logo in the first page
     \begin{minipage}{1.\textwidth}%
-    	\vspace{-0.15cm}\hspace{-0.9cm}\includegraphics[height=1.0cm,width=1.0cm]{logo/logo_bjtu}\hspace{0.1cm}\vspace{2pt}\includegraphics[height=0.9cm]{logo/header_logo}%
+    	\vspace{-0.15cm}\hspace{-0.9cm}\includegraphics[height=1.0cm,width=1.0cm]{logo/logo_bjtu_light_blue}\hspace{0.1cm}\vspace{2pt}\includegraphics[height=0.9cm]{logo/header_bjtu_light_blue}%
     \end{minipage}%
     \par%
     \hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}%
@@ -24,7 +24,7 @@
     \begin{centering}
         \begin{beamercolorbox}[sep=8pt,center,wd=12cm]{title}
         
-            \vspace{4em}\usebeamerfont{title}{\color{dark_blue}\textbf{\inserttitle}}\par%
+            \vspace{4em}\usebeamerfont{title}{\color{dark blue}\textbf{\inserttitle}}\par%
             \ifx\insertsubtitle\@empty%
             \else%
                 \vskip0.25em%
@@ -39,13 +39,23 @@
     
         % author
         \begin{textblock*}{5cm}(6cm, 1.5cm)
-            {\color{title_blue}\usebeamerfont{author}\insertauthor}
+            {\color{title blue}\usebeamerfont{author}\insertauthor}
         \end{textblock*}
         
         % date 
         \begin{textblock*}{5cm}(6cm, 2.5cm)
-            {\color{title_blue}\usebeamerfont{author}\insertdate}
+            {\color{title blue}\usebeamerfont{author}\insertdate}
         \end{textblock*}
     
     \end{centering}
 }
+
+% font style
+% \setbeamerfont{block title}{series=\bfseries}
+% \setbeamerfont{alerted text}{series=\bfseries}
+% \setbeamerfont{example text}{series=\bfseries}
+
+\DeclareTextFontCommand{\bbalert}{\color{title blue}\bfseries} % bold blue text
+\DeclareTextFontCommand{\balert}{\color{title blue}} % blue text
+\DeclareTextFontCommand{\bralert}{\color{dark red}\bfseries} % bold red text
+\DeclareTextFontCommand{\ralert}{\color{dark red}} % red text
